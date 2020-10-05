@@ -1,0 +1,236 @@
+{%extends "base.html"%}
+<!DOCTYPE html>
+{%load static%}
+
+{%block head_block%}
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="{%static "odometer.css"%}">
+  <link rel="stylesheet" href="{%static "drives.css"%}">
+  <title>Our Drives</title>
+{%endblock%}
+
+{%block body_block%}
+  <div class="jumbotron" id="title">
+    <h1 ><span class="double">
+      Our Drives
+    </span></h1>
+  </div>
+
+  <div class="w3-container">
+    <div class="w3-panel w3-sand w3-leftbar">
+      <p>
+        <i class="fa fa-quote-left w3-xxlarge w3-opacity"></i><br>
+        <i class="w3-serif w3-xlarge">Service to others is the rent you pay for your room here on earth.</i><br>
+        <i class="w3-serif w3-large">- Mohammad Ali</i>
+      </p>
+    </div>
+  </div>
+<div class="container mian"style="background-color:white;">
+
+
+  <div id="ep">
+    <h1>Ek Pahal</h1>
+    <h3>The first step towards a better India</h3>
+  </div>
+  <hr id="hr_tg">
+  <h2 id="sm">
+    <strong>Situation of Mahapura</strong>
+    <div class="nav_arrows">
+      <a href="#gm">
+        <div class="ad">
+          <i class="arrow down"></i>
+        </div>
+      </a>
+    </div>
+  </h2>
+  <hr id="hr_st">
+  <div class="container-fluid" id="cf">
+    <p>Route India embarked on its journey to clean the litter in India by organizing the cleanup drive <em>Ek Pahal</em>, meaning an initiative, in the village
+      of Mahapura near Jayshree Periwal International School, Jaipur. The village was found to have accumulateed large <strong>litter grounds</strong> that not only
+      covered useful land, but also catered to breeding grounds for vectors like mosquitos and <strong>water pollution</strong>. In addition to that, Mahapura has <strong>open drains</strong> on
+       every road, in front of every house, in front of the <em>gram-panchayat</em>, even in front of the local dispensary! The throbbing problem is that Mahapura doesn't come under any urban authoritites
+       due to which noone collects the ever increasing heaps of litter. With their low incomes and subsistence occupations, the villagers of Mahapura cannot afford the renting of private dumping
+       facilities. Thus, the level of uncollected trash, the lack of motivation among the villagers to collect it, and the lack of means to get rid of the trash inspired us to take the matter in our hands.  </p>
+
+    <div class="w3-content w3-display-container situation">
+      <img class="mySlides1" src="{%static 'situation 1.webp' %}" style="width:100%">
+      <img class="mySlides1" src="{%static 'situation 2.webp' %}" style="width:100%">
+      <img class="mySlides1" src="{%static 'situation 3.jpg' %}" style="width:100%">
+      <img class="mySlides1" src="{%static 'situation 4.jpg' %}" style="width:100%">
+      <img id="vertical" class="mySlides1" src="{%static 'situation 5.webp' %}" style="width:100%">
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusSlides(-1,0)" id="arrow s1l">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusSlides(1,0)" id="arrow s1r">&#10095;</button>
+    </div>
+
+    <h2 id="gm">
+      <strong>Gloves and masks on!</strong>
+      <div class="nav_arrows">
+        <a href="#sm">
+          <div class="au">
+            <i class="arrow up"></i>
+          </div>
+        </a>
+        <a href="#ts">
+          <div class="ad">
+            <i class="arrow down"></i>
+          </div>
+        </a>
+      </div>
+    </h2>
+    <hr id="hr_st">
+    <p>The Route India team along with more than 50 volunteers began the drive to meticulously collect every single piece of plastic
+      and cloth lying around and even collected statistical data keeping up with Route's global approach towards clean up drives.
+      We segregated the trash into different categories like single use plastic, clothes, glassware, rubber materials, and papers & cardboards.
+      We cleaned 3 different sites in the village containing the most trash. Not only were we able to successfully clean the village, but most importantly we succeeded in
+      motivating other fellow villagers to follow the same ROUTE towards a cleaner India. We were soon joined by some volunteers from the village to reach the common goal.
+    </p>
+    <div class="w3-content w3-display-container gloves_on">
+      <img class="mySlides2" src="{%static 'Gloves on 1.JPG' %}" style="width:100%">
+      <img id="vertical"class="mySlides2" src="{%static 'Gloves on 2.png' %}" style="width:100%">
+      <img class="mySlides2" src="{%static 'Gloves on 3.JPG' %}" style="width:100%">
+      <img class="mySlides2" src="{%static 'Gloves on 4.JPG' %}" style="width:100%">
+      <img class="mySlides2" src="{%static 'Gloves on 5.JPG' %}" style="width:100%">
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusSlides(-1,1)" id="arrow s2l">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusSlides(1,1)" id="arrow s2r">&#10095;</button>
+    </div>
+      <!-- stats -->
+    <h2 id="ts">
+      <strong>Trash collection statistics</strong>
+      <div class="nav_arrows">
+        <a href="#gm">
+          <div class="au">
+            <i class="arrow up"></i>
+          </div>
+        </a>
+        <a href="#gg">
+          <div class="ad">
+            <i class="arrow down"></i>
+          </div>
+        </a>
+      </div>
+    </h2>
+    <hr id="hr_st">
+      <div class="facts">
+        <div>
+          <h1>204 Kg</h1>
+          <p>Single Use Plastic<br>(with more than 2700 tobacco and cigarette packets)</p>
+        </div>
+        <div>
+          <h1>25 Kg</h1>
+          <p>Cardboards and papers</p>
+        </div>
+        <div>
+          <h1>23 Kg</h1>
+          <p>Glassware including 126 glass bottles</p>
+        </div>
+        <div>
+          <h1>5 Kg</h1>
+          <p>Rubber materials (and 120+ footwear!)</p>
+        </div>
+        <div>
+          <h1>260</h1>
+          <p>Pieces of cloth</p>
+        </div>
+        <div>
+          <h1>228</h1>
+          <p>Coconuts</p>
+        </div>
+
+      </div>
+
+      <h2 id="gg">
+        <strong>Go green!</strong>
+        <div class="nav_arrows">
+          <a href="#ts">
+            <div class="au">
+              <i class="arrow up"></i>
+            </div>
+          </a>
+          <a href="#bc">
+            <div class="ad">
+              <i class="arrow down"></i>
+            </div>
+          </a>
+        </div>
+      </h2>
+      <hr id="hr_st">
+      <p>Cleaning trash does not outdo the damage it has already caused. Growing more plants and trees not only reduces visual pollution caused by litter, but also makes a positive impact on the whole village ecosystem.
+         Route India understands this and hence took the initiative to plant 10+ trees in Mahapura. We also discussed with the <em>Sarpanch</em> (village govt. head) about the open drains in Mahapura.
+      </p>
+      <div class="w3-content w3-display-container go_green">
+
+        <img class="mySlides3" src="{%static 'Go Green 1.webp' %}" style="width:100%">
+        <img id="vertical"class="mySlides3" src="{%static 'Go Green 2.png' %}" style="width:100%">
+        <img class="mySlides3" src="{%static 'Go Green 3.JPG' %}" style="width:100%">
+        <img class="mySlides3" src="{%static 'Go Green 4.jpg' %}" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusSlides(-1,2)" id="arrow s3l">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusSlides(1,2)" id="arrow s3r">&#10095;</button>
+      </div>
+      <h2 id="bc">
+        <strong>Be the change - Be Route!</strong>
+        <div class="nav_arrows">
+          <a href="#gg">
+            <div class="au">
+              <i class="arrow up"></i>
+            </div>
+          </a>
+        </div>
+      </h2>
+      <hr id="hr_st">
+      <div class="image">
+        <img id="ba"src="{%static 'Before-After.webp'%}" alt="">
+      </div>
+
+      <p>
+        Though our effort to bring a change was small, the ripple of its consequences cannot be understated. Even the green villages are turning gray with the litter. The gravity of the consequences of ignoring litter are huge
+        and a small initiative can improve a lot!<br><br>
+        Interested in organizing a volunteering event with Route India? Contact us <a href="{%url 'contactus'%}" id="contact_link"><u>here</u></a>
+      </p>
+
+  </div>
+</div>
+
+  {%block script_block%}
+
+  <script>
+    var slideIndex = [1,1,1];
+    var slideId = ["mySlides1", "mySlides2","mySlides3"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+
+    function plusSlides(n, no) {
+      slideIndex[no] += n;
+      showSlides(slideIndex[no], no);
+    }
+
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      var c=document.getElementsByClassName("w3-content");
+      if (n > x.length) {slideIndex[no] = 1}
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      if (  ((n==5)&&(no==0)) ||  ((n==2)&&(no==1)) || ((n==2)&&(no==2)) )
+      {
+        c[no].style.width = "48%";
+      }
+      else{
+        c[no].style.width="90%";
+      }
+      x[slideIndex[no]-1].style.display = "block";
+      console.log("done");
+
+    }
+
+  </script>
+
+
+  {%endblock%}
+{%endblock%}
