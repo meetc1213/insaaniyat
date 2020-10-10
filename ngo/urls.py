@@ -19,8 +19,5 @@ from django.conf.urls import url,include
 from home import views as homeview
 urlpatterns = [
     url(r'^$',homeview.home,name='home'),
-    url(r'^aboutus',homeview.aboutus,name='aboutus'),
-    url(r'^drives',homeview.drives,name='drives'),
-    url(r'^contactus',homeview.contactus,name='contactus'),
     path('admin/', admin.site.urls),
 ]
