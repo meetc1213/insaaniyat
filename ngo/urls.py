@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf.urls import url,include
 from home import views as homeview
 urlpatterns = [
-    url(r'^$',homeview.home,name='home'),
+    path('',homeview.home,name='home'),
+    path('/contact',homeview.contact,name='contact'),
     path('admin/', admin.site.urls),
 ]

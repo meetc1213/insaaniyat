@@ -12,7 +12,22 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
+.discuss_projects{
+  background-color: white!important;
+}
+.discuss_projects .project_text h3{
+  color:#001D38 !important;
+}
+.contact_add{
+  max-width: 20% !important;
+}
+.contact_form_row{
+  justify-content: center;
+  
+}
+.media_links{
+  padding: 0px 0px 0px 191px;
+}
 /* line 12, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 .img {
   max-width: 100%;

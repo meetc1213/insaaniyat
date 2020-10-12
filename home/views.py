@@ -6,5 +6,6 @@ def acme_challenge(request):
     return HttpResponse(settings.ACME_CHALLENGE_CONTENT)
 def home(request):
     return render(request,'index.html',{'home_active':'active'})
-
+def contact(request):
+    return render(request,'contact.html',{})
 # Create your views here.
