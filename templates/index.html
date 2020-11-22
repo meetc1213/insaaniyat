@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}?{% now 'U' %}
+{% load static %}
 <html lang="en">
 
 <head>
@@ -11,7 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-
+  {% block css %}
+  {% endblock %}
   <!-- Google Fonts -->
   <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -24,7 +25,31 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}?{% now 'U' %}" rel="stylesheet">
-
+  <style>
+    #hero .btn-get-started, .cta,.contact .php-email-form button[type="submit"] {
+      background: #ff180c !important;
+      box-shadow: 0 8px 28px rgba(223, 22, 22, 0.45) !important;
+    }
+    .featured-services .icon i, .about .content ul i, .counts .counters span,
+     .services .icon-box .icon i,.contact .info i,.services .icon-box:hover h4 a {
+      color: #df1616 !important;
+    }
+    .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i{
+      background: #ff180c !important;
+      color: white !important;
+    }
+    .back-to-top i,.contact .php-email-form button[type="submit"]{
+      background: #ff180c;
+    }
+    #footer .footer-top .social-links a{
+      background: #ff180c !important;
+      color: white !important;
+    }
+    .contact .info, .contact .php-email-form {
+    border-top: 3px solid#ff180c !important;
+    border-bottom: 3px solid#ff180c !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,39 +58,30 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Sample-Biz.</a></h1>
+      <h1 class="logo mr-auto"><a href="{% url 'home' %}">Sample-Biz.</a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
          
           <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
+          <li><a href="#contact">Contact</a></li>
+          <li class="drop-down"><a href="">Forms</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="{% url 'donor_form' %}">Donor Form</a></li>
+              <li><a href="{% url 'recipient_form' %}">Receiver Form</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          
+
 
         </ul>
       </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
-
+  {% block body %}
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
@@ -75,7 +91,7 @@
           <h1>Your slogan/moto</h1>
           <h2>Introduce your amazing business here.</h2>
           <div class="d-flex">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="#cta" class="btn-get-started scrollto">Get Started</a>
          </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
@@ -88,36 +104,6 @@
 
   <main id="main">
 
-    <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="icofont-computer"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><i class="icofont-image"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="icofont-tasks-alt"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Featured Services Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -244,7 +230,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <!-- <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
         <div class="section-title">
@@ -308,7 +294,7 @@
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>End Testimonials Section -->
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -317,7 +303,8 @@
         <div class="text-center">
           <h3>Call To Action</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
+          <a class="cta-btn" href="{% url 'donor_form' %}">Donate!</a>
+          <a class="cta-btn" href="{% url 'recipient_form' %}">Receive!</a>
         </div>
 
       </div>
@@ -337,8 +324,8 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <img src="{% static 'index.png' %}?{% now 'U' %}" alt="">
-              <h4>Person's Name</h4>
-              <span>Position</span>
+              <h4>Ishaan Chaturvedi</h4>
+              <span>Co-Founder, CEO</span>
               <p>
                 Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
               </p>
@@ -354,8 +341,8 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <img src="{% static 'index.png' %}?{% now 'U' %}" alt="">
-              <h4>Person's name</h4>
-              <span>Position</span>
+              <h4>Meet Chaudhari</h4>
+              <span>Co-Founder, CTO</span>
               <p>
                 Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
               </p>
@@ -368,22 +355,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="{% static 'index.png' %}?{% now 'U' %}" alt="">
-              <h4>Person's name</h4>
-              <span>Position</span>
-              <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-              </p>
-              <div class="social">
-                <a href=""><i class="icofont-twitter"></i></a>
-                <a href=""><i class="icofont-facebook"></i></a>
-                <a href=""><i class="icofont-instagram"></i></a>
-                <a href=""><i class="icofont-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
+       
 
         </div>
 
@@ -407,7 +379,8 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Location:</h4>
-                <p>Your adresss here</p>
+                <p>Jayshree Periwal International School,<br>
+                Jaipur, Rajasthan,<br>India.</p>
               </div>
 
               <div class="email">
@@ -422,7 +395,7 @@
                 <p>+91 1234567890</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              
             </div>
 
           </div>
@@ -466,7 +439,7 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
+  {% endblock %}
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -474,27 +447,10 @@
 
       <div class="container">
 
-        <div class="row  justify-content-center">
-          <div class="col-lg-6">
-            <h3>Sample-Biz</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-          </div>
-        </div>
-
-        <div class="row footer-newsletter justify-content-center">
-          <div class="col-lg-6">
-            <form action="#" method="">
-              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-
         <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+
           <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
         </div>
 
       </div>

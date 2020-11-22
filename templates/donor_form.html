@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block css %}
+<link href="{% static 'vendor/mdi-font/css/material-design-iconic-font.min.css' %}?{% now 'U' %}" rel="stylesheet" media="all">
+<link href="{% static 'vendor/font-awesome-4.7/css/font-awesome.min.css' %}?{% now 'U' %}" rel="stylesheet" media="all">
+<!-- Font special for pages-->
+
+<!-- Vendor CSS-->
+<link href="{% static 'vendor/select2/select2.min.css' %}?{% now 'U' %}" rel="stylesheet" media="all">
+<link href="{% static 'vendor/datepicker/daterangepicker.css' %}?{% now 'U' %}" rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="{% static 'css/main.css' %}?{% now 'U' %}" rel="stylesheet" media="all">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<style>
+  .input-group{
+    width: 240px !important;
+  }
+  .col-2{
+    -ms-flex: 0 0 0 !important;
+  max-width: 260px !important;
+  }
+  input[type="date" i] {
+    padding: 0 14px !important;
+}
+  
+</style>
+{% endblock %}
+
+{% block body %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Donor Form</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+          <div class="wrapper wrapper--w680">
+              <div class="card card-4">
+                  <div class="card-body">
+                      <h2 class="title">Donor Registration Form</h2>
+                      <form method="POST">
+                        {% csrf_token %}
+                          <div class="row row-space">
+                              <div class="col-2">
+                                  <div class="input-group">
+                                      <label class="label">first name</label>
+                                      <input required class="input--style-4" type="text" name="first_name">
+                                  </div>
+                              </div>
+                              <div class="col-2">
+                                  <div class="input-group">
+                                      <label class="label">last name</label>
+                                      <input required class="input--style-4" type="text" name="last_name">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row row-space">
+                           
+                              <div class="col-2">
+                                  <div class="input-group">
+                                      <label class="label">Gender</label>
+                                      <div class="p-t-10">
+                                          <label class="radio-container m-r-45">Male
+                                              <input required type="radio" checked="checked" name="gender" value="male">
+                                              <span class="checkmark"></span>
+                                          </label>
+                                          <label class="radio-container">Female
+                                              <input required type="radio" name="gender" value="female">
+                                              <span class="checkmark"></span>
+                                          </label>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-2">
+                                <label class="label">Blood Group</label>
+                                <div class="input-group">
+                                  
+                                  <div class="rs-select2 js-select-simple select--no-search">
+                                      <select name="bloodgrp" required>
+                                          <option disabled="disabled" selected="selected">Choose one</option>
+                                          <option>A+</option>
+                                          <option>A-</option>
+                                          <option>B+</option>
+                                      </select>
+                                      <div class="select-dropdown"></div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row row-space">
+                              <div class="col-2">
+                                  <div class="input-group">
+                                      <label class="label">Date of most recent positive test</label>
+                                      <div class="input-group" style="margin: 0;">
+                                          <input required class="input--style-4 js-datepicker" type="date" name="pos_test">
+                                          <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Date of most recent negative test</label>
+                                    <div class="input-group" style="margin: 0;">
+                                        <input required class="input--style-4 js-datepicker" type="date" name="neg_test">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                              
+                          </div>
+                          <div class="row row-space">
+                              <div class="col-2">
+                                  <div class="input-group">
+                                      <label class="label">Email</label>
+                                      <input required class="input--style-4" type="email" name="email">
+                                  </div>
+                              </div>
+                              <div class="col-2">
+                                  <div class="input-group">
+                                      <label class="label">Phone Number</label>
+                                      <input required class="input--style-4" type="text" name="phone">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row row-space">
+                            <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">City</label>
+                                  <input required class="input--style-4" type="text" name="city">
+                              </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">Any pre-existing conditions the patient has: </label>
+                                  <input class="input--style-4" type="text" name="pre-cond">
+                              </div>
+                            </div>
+                          </div>
+                          <p>By submitting this form, you consent for your detils to be shared on our social-media pages</p>
+                          <div class="row row-space" style="display:flex;justify-content:center">
+                            <div class="p-t-15">
+                              <input class="btn btn--radius-2 btn--blue" type="submit" value="Submit">
+                              
+                           </div>
+                          </div>
+                          
+                          
+                      </form>
+                  </div>
+              </div>
+          </div>
+         </div>
+      </div>
+    </section>
+    <script src="{% static 'vendor/select2/select2.min.js' %}?{% now 'U' %}"></script>
+    <script src="{% static 'vendor/datepicker/moment.min.js' %}?{% now 'U' %}"></script>
+    <script src="{% static 'vendor/datepicker/daterangepicker.js' %}?{% now 'U' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js/global.js' %}?{% now 'U' %}"></script>
+  </main><!-- End #main -->
+{% endblock %}
+  <!-- ======= Footer ======= -->
+  

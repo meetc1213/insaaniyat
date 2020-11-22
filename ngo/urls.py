@@ -19,6 +19,9 @@ from django.conf.urls import url,include
 from home import views as homeview
 urlpatterns = [
     path('',homeview.home,name='home'),
+    path('donor-form/',homeview.donor_form,name='donor_form'),
+    path('recipient-form/',homeview.recipient_form,name='recipient_form'),
+
     # path('/contact',homeview.contact,name='contact'),
     path('admin/', admin.site.urls),
 ]
