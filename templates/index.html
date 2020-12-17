@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Blood 4 COVID</title>
+  <title>Insaaniyat</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  {% block css %}
-  {% endblock %}
+
   <!-- Google Fonts -->
-  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}?{% now 'U' %}" rel="stylesheet">
-  <link href="{% static 'vendor/icofont/icofont.min.css' %}?{% now 'U' %}" rel="stylesheet">
-  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}?{% now 'U' %}" rel="stylesheet">
-  <link href="{% static 'vendor/venobox/venobox.css' %}?{% now 'U' %}" rel="stylesheet">
-  <link href="{% static 'vendor/owl.carousel/assetsowl.carousel.min.css' %}?{% now 'U' %}" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/assetsowl.carousel.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'css/style.css' %}?{% now 'U' %}" rel="stylesheet">
+  <link href="static/css/style.css" rel="stylesheet">
   <style>
     #hero .btn-get-started, .cta,.contact .php-email-form button[type="submit"] {
       background: #ff180c !important;
@@ -55,13 +53,13 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top" id="home">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="{% url 'home' %}">Blood 4 COVID</a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">Blood 4 COVID</a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{% url 'home' %}">Home</a></li>
+          <li class="active"><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
          
@@ -69,8 +67,8 @@
           <li><a href="#contact">Contact</a></li>
           <li class="drop-down"><a href="">Forms</a>
             <ul>
-              <li><a href="{% url 'donor_form' %}">Donor Form</a></li>
-              <li><a href="{% url 'recipient_form' %}">Receiver Form</a></li>
+              <li><a href="donor_form.html">Donor Form</a></li>
+              <li><a href="recipient_form.html">Receiver Form</a></li>
             </ul>
           </li>
           
@@ -81,11 +79,11 @@
 
     </div>
   </header><!-- End Header -->
-  {% block body %}
+  
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
-    <div class="container">
+    <div class="container" id=>
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>Share your blood; Be the saviour.</h1>
@@ -95,7 +93,7 @@
          </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="{% static 'antibody plaams final.jpg' %}?{% now 'U' %}" class="img-fluid animated" alt="">
+          <img src="static/antibody plaams final.jpg" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -111,7 +109,7 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <img src="{% static 'img/about.png' %}?{% now 'U' %}" class="img-fluid" alt="">
+            <img src="static/img/about.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content">
             <h3>A platform where donors meet receivers.</h3>
@@ -219,7 +217,7 @@
             Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
           </p>
-          <img src="{% static 'index.png' %}?{% now 'U' %}" class="testimonial-img" alt="">
+          <img src="static/index.png" class="testimonial-img" alt="">
           <h3>Person 1</h3>
           <h4>Position 1</h4>
         </div>
@@ -230,7 +228,7 @@
             Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
           </p>
-          <img src="{% static 'index.png' %}?{% now 'U' %}" class="testimonial-img" alt="">
+          <img src="static/index.png" class="testimonial-img" alt="">
           <h3>Person 2</h3>
           <h4>Position 2</h4>
         </div>
@@ -241,7 +239,7 @@
             Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
           </p>
-          <img src="{% static 'index.png' %}?{% now 'U' %}" class="testimonial-img" alt="">
+          <img src="static/index.png" class="testimonial-img" alt="">
           <h3>Person 3</h3>
           <h4>Position 3</h4>
         </div>
@@ -252,7 +250,7 @@
             Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
           </p>
-          <img src="{% static 'index.png' %}?{% now 'U' %}" class="testimonial-img" alt="">
+          <img src="static/index.png" class="testimonial-img" alt="">
           <h3>Person 4</h3>
           <h4>Position 4</h4>
         </div>
@@ -263,7 +261,7 @@
             Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
           </p>
-          <img src="{% static 'index.png' %}?{% now 'U' %}" class="testimonial-img" alt="">
+          <img src="static/index.png" class="testimonial-img" alt="">
           <h3>Person 5</h3>
           <h4>Position 5</h4>
         </div>
@@ -278,8 +276,8 @@
         <div class="text-center">
           <h3>Call To Action</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="{% url 'donor_form' %}">Donate!</a>
-          <a class="cta-btn" href="{% url 'recipient_form' %}">Receive!</a>
+          <a class="cta-btn" href="donor_form">Donate!</a>
+          <a class="cta-btn" href="recipient_form">Receive!</a>
         </div>
 
       </div>
@@ -298,7 +296,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="{% static 'index.png' %}?{% now 'U' %}" alt="">
+              <img src="static/index.png" alt="">
               <h4>Ishaan Chaturvedi</h4>
               <span>Co-Founder, CEO</span>
               <p>
@@ -315,7 +313,7 @@
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="{% static 'index.png' %}?{% now 'U' %}" alt="">
+              <img src="static/index.png" alt="">
               <h4>Meet Chaudhari</h4>
               <span>Co-Founder, CTO</span>
               <p>
@@ -414,7 +412,7 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-  {% endblock %}
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -444,18 +442,18 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{% static 'vendor/jquery/jquery.min.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/php-email-form/validate.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/counterup/counterup.min.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/venobox/venobox.min.js' %}?{% now 'U' %}"></script>
-  <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}?{% now 'U' %}"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/counterup/counterup.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="{% static 'js/main.js' %}?{% now 'U' %}"></script>
+  <script src="static/js/main.js"></script>
 
 </body>
 
