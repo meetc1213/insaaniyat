@@ -139,22 +139,6 @@
                               </div>
                           </div>
                           <div class="row row-space">
-
-                              <div class="col-2">
-                                  <div class="input-group">
-                                      <label class="label">Gender</label>
-                                      <div class="p-t-10">
-                                          <label class="radio-container m-r-45">Male
-                                              <input required type="radio" checked="checked" name="gender" value="male">
-                                              <span class="checkmark"></span>
-                                          </label>
-                                          <label class="radio-container">Female
-                                              <input required type="radio" name="gender" value="female">
-                                              <span class="checkmark"></span>
-                                          </label>
-                                      </div>
-                                  </div>
-                              </div>
                               <div class="col-2">
                                 <label class="label">Blood Group</label>
                                 <div class="input-group">
@@ -176,18 +160,25 @@
                                   </div>
                               </div>
                             </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                                  <label class="label">Amount needed (in pints)</label>
+                                  <input required class="input--style-4" min="50" type="number" name="amt">
+                              </div>
+                          </div>
                           </div>
 
                           <div class="row row-space">
                             <div class="col-2">
                               <div class="input-group">
-                                  <label class="label">Name & address of the hospital where blood is needed</label>
+                                  <label class="label">Name of the hospital where blood is needed</label>
                                   <input required class="input--style-4" type="text" name="hospital">
                               </div>
-                          </div><div class="col-2">
+                          </div>
+                          <div class="col-2">
                             <div class="input-group">
-                                <label class="label">Amount needed (in pints)</label>
-                                <input required class="input--style-4" min="50" type="number" name="amt">
+                                <label class="label">Address of the hospital</label>
+                                <input required class="input--style-4" type="text" name="hospital">
                             </div>
                         </div>
 
